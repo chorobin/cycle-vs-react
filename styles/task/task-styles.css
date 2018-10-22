@@ -1,0 +1,47 @@
+.task {
+  padding: 20px;
+  overflow: auto;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: lightgray;
+  color: rgba(0, 0, 0, 0.85);
+  border-radius: 3px;
+  cursor: default;
+  position: relative;
+}
+
+.task:hover {
+  cursor: pointer;
+  background-color: rgba(211, 211, 211, 0.4);
+  transition: 0.5s;
+}
+
+.task-selected {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 191, 255, 0.3);
+  visibility: hidden;
+}
+
+.task-selected-show {
+  visibility: visible;
+}
+
+.task-left {
+  float: left;
+  clear: left;
+}
+
+.task-right {
+  float: right;
+  clear: right;
+}
+
+.task-title {
+  display: inline;
+  margin: 0px;
+  font-weight: 500;
+}

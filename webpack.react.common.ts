@@ -16,6 +16,24 @@ const config = merge(common, {
           configFileName: "./react/tsconfig.apps.json",
         },
       },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader",
+            options: {
+              hmr: true,
+            },
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              camelCase: true,
+            },
+          },
+        ],
+      },
     ],
   },
 });

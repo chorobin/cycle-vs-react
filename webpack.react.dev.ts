@@ -1,8 +1,4 @@
-import common from "./webpack.react.common";
-import merge from "webpack-merge";
+import reactCommon from "./webpack.react.common";
+import devCommon from "./webpack.dev.common";
 
-const config = merge(common, {
-  mode: "development",
-});
-
-export default config;
+export default devCommon(reactCommon);

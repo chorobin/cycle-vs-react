@@ -1,0 +1,10 @@
+.task-list {
+  border: 1px solid;
+  padding: 20px;
+  box-shadow: 1px 2px 8px;
+  border-color: lightgray;
+}
+
+.task-list > *:not(:last-child) {
+  margin-bottom: 15px;
+}
