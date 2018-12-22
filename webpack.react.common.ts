@@ -1,5 +1,6 @@
 import common from "./webpack.common";
 import merge from "webpack-merge";
+import ForkTsCheckerPlugin from "fork-ts-checker-webpack-plugin";
 
 const config = merge(common, {
   entry: "./react/index.tsx",
@@ -11,10 +12,7 @@ const config = merge(common, {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: "awesome-typescript-loader",
-        options: {
-          configFileName: "./react/tsconfig.apps.json",
-        },
+        loader: "babel-loader",
       },
       {
         test: /\.css$/,
@@ -36,6 +34,11 @@ const config = merge(common, {
       },
     ],
   },
+  plugins: [
+    /*new ForkTsCheckerPlugin({
+      tsconfig: "./react/tsconfig.json",
+    }),*/
+  ],
 });
 
 export default config;

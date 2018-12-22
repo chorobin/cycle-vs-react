@@ -15,6 +15,6 @@ export const TaskComponent: React.SFC<{ task: Task; onClick: () => void; selecte
     <h3 className={`${taskStyleTitle} ${taskStyleLeft}`}>{task.title}</h3>
     <span className={taskStyleRight}>{task.assignee}</span>
     <span className={taskStyleLeft}>{task.description}</span>
-    <span className={taskStyleRight}>{task.due.toString()}</span>
+    <span className={taskStyleRight}>{task.due.toLocaleDateString()}</span>
   </div>
 );
